@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<serviceGroup>
+
+  <!-- mobilesso service -->
+  <!-- service name="RegistrationSpringInit" class="draft.ssso.soap.services.RegistrationSpringInit">
+    <description>This web service initializes Spring.</description>
+    <parameter name="ServiceClass">draft.ssso.soap.services.RegistrationSpringInit</parameter>
+    <parameter name="ServiceTCCL">composite</parameter>
+    <parameter name="load-on-startup">true</parameter>
+  </service-->
+  
+  <service name="RegistrationService">
+    <description>Weather Spring POJO Axis2 AAR deployment</description>
+    <parameter name="ServiceClass">draft.ssso.soap.services.RegistrationService</parameter>
+    <parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+    <excludeOperations>
+    </excludeOperations>
+    <parameter name="SpringBeanName">registrationSpringService</parameter>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
+  </service>
+  
+  <service name="TestDriveService">
+    <description>Weather Spring POJO Axis2 AAR deployment</description>
+    <parameter name="ServiceClass">draft.ssso.soap.services.TestDriveService</parameter>
+    <parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+    <parameter name="SpringBeanName">testDriveSpringService</parameter>
+    <excludeOperations>
+    </excludeOperations>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
+  </service>
+  
+  <!-- 
+  <service name="RegisterProductService">
+    <description>Weather Spring POJO Axis2 AAR deployment</description>
+    <parameter name="ServiceClass">draft.ssso.soap.services.RegisterProductService</parameter>
+    <parameter name="ServiceObjectSupplier">org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier</parameter>
+    <excludeOperations>
+    </excludeOperations>
+    <parameter name="SpringBeanName">registerProductSpringService</parameter>
+    <parameter name="SpringContextLocation">spring/spring-app-context.xml</parameter>
+    <messageReceivers>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+      <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
+  </service>
+   -->
+</serviceGroup>

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	
+	<class name="myDao.CustomersNoneSSO" table="customers_none_sso">
+		<id name="cns_id" type="big_decimal" >
+			<column name="cns_id" precision="20" scale="0" />
+    		<generator class="native" >		
+        		<param name="sequence">seq_customers_none_sso</param>
+    		</generator>
+		</id>
+		<property name="appid" type="string">
+			<column name="appid" />
+		</property>
+		<property name="contact_email" type="string">
+			<column name="contact_email" />
+		</property>
+		<property name="contact_mobile" type="string">
+			<column name="contact_mobile" />
+		</property>
+		<property name="customer_name" type="string">
+			<column name="customer_name" />
+		</property>
+		<property name="customer_birthday" type="string">
+			<column name="customer_birthday" />
+		</property>
+		<property name="customer_occupation" type="string">
+			<column name="customer_occupation" />
+		</property>
+		<property name="customer_education" type="string">
+			<column name="customer_education" />
+		</property>
+		<property name="customer_gender" type="string">
+			<column name="customer_gender" />
+		</property>
+		<property name="customer_address" type="string">
+			<column name="customer_address" />
+		</property>
+		<property name="hobby" type="string">
+			<column name="hobby" />
+		</property>
+		<property name="address_province" type="string">
+			<column name="address_province" />
+		</property>
+		<property name="address_city" type="string">
+			<column name="address_city" />
+		</property>
+		<property name="purchase_brand" type="string">
+			<column name="purchase_brand" />
+		</property>
+		<property name="purchase_model" type="string">
+			<column name="purchase_model" />
+		</property>
+		<property name="purchase_date" type="string">
+			<column name="purchase_date" />
+		</property>
+		<property name="purchase_budget" type="string">
+			<column name="purchase_budget" />
+		</property>
+		<property name="owncar_manufacturer" type="string">
+			<column name="owncar_manufacturer" />
+		</property>
+		<property name="owncar_age" type="string">
+			<column name="owncar_age" />
+		</property>
+	  	<property name="owncar_model" type="string">
+			<column name="owncar_model" />
+		</property>
+		<property name="insert_timestamp" type="timestamp">
+			<column name="insert_timestamp" />
+		</property>
+		<property name="update_timestamp" type="timestamp">
+			<column name="update_timestamp" />
+		</property>
+		<property name="matched" type="integer">
+			<column name="matched" />
+		</property>
+		<property name="mdm_id" type="long">
+			<column name="mdm_id" />
+		</property>
+		<property name="gc_id" type="string">
+			<column name="gc_id" />
+		</property>
+		<property name="purchase_selected" type="string">
+			<column name="purchase_selected" />
+		</property>
+		<property name="owncar_selected" type="string">
+			<column name="owncar_selected" />
+		</property>
+		<property name="marketing_permission" type="string">
+			<column name="marketing_permission" />
+		</property>
+		<property name="testdrive_permission" type="string">
+			<column name="testdrive_permission" />
+		</property>
+		<property name="pinConfirmedAt" type="timestamp">
+			<column name="pin_confirmed_at" />
+		</property>
+		<property name="pinToken" type="string">
+			<column name="pin_token" />
+		</property>
+		<property name="userAgent" type="string">
+			<column name="user_agent" />
+		</property>
+		<property name="userIpAddress" type="string">
+			<column name="user_ip_address" />
+		</property>
+	</class>
+
+</hibernate-mapping>
